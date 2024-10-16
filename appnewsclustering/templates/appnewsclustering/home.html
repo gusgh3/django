@@ -1,0 +1,26 @@
+<!-- company_info/templates/appnewsclustering/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to News Clustering Page!!!</title>
+  <style>
+    .title {
+      text-align: center;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="title">Welcome to the News Clustering Page</h1>
+</body>
+</html>
+
+<h1>Company Information</h1>
+<ul>
+    {% for company in companies %}
+        <li>{{ company.name }}: {{ company.description }}</li>
+    {% endfor %}
+</ul>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'appnewsclustering/styles.css' %}">
